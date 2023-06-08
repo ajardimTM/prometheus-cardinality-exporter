@@ -12,7 +12,7 @@ WORKDIR /go/github.com/thought-machine/prometheus-cardinality-exporter
 
 COPY . .
 
-RUN ./pleasew test //... --exclude 'docker'
+RUN ./pleasew test --stream_results //... --exclude 'docker'
 
 RUN ./pleasew build //... --exclude 'docker'
 

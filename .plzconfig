@@ -6,8 +6,10 @@
 ; Or you can uncomment the following to pin everyone to a particular version;
 ; when you change it all users will automatically get updated.
 [please]
-version = 16.10.1
-versionchecksum = 27175acc503594a45d8dbfd1cb096b93bd1e4d6e551e4f35537f1e633fa81929
+version = 17.0.0
+versionchecksum = 45c40d31beed1dc9d60dbca85c0a8fc9f81e18f3f96f42ba9b876450d1a80a2a
+versionchecksum = 439765e095b504096b2e0ee0d2baae77a9725c1aa7915f054dcbc48179a56091
+pluginrepo = https://github.com/{owner}/{plugin}/archive/{revision}.zip
 
 [buildconfig]
 default-docker-repo = hub.docker.com
@@ -24,6 +26,10 @@ gopath = $TMP_DIR:$TMP_DIR/third_party/go:$TMP_DIR/third_party/go/kubernetes
 DefaultStatic = false
 CgoCCTool = /usr/local/musl/bin/musl-gcc
 
+[Plugin "go"]
+Target = //build/plugins:go
+LegacyImports = true
+defaultstatic = true
 
 [licences]
 accept = MIT
